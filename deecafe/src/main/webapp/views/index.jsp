@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="project.deecafe.models.Menu" %>
-<% List<Menu> m = (List<Menu>) request.getAttribute("menus"); %>
+<% List<Menu> d = (List<Menu>) request.getAttribute("data"); %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="../views/index.jsp" class="logo">
                             <img src="../views/assets/images/logo.png" align="dee cafe html template" style="width: 150px;">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -171,18 +171,17 @@
                 <div class="owl-menu-item owl-carousel">
                     <div class="item">
                         <div class='card card1'>
-                            Jumlah data : <%= m.size() %>
-                            <% for (int i=0; i < m.size(); i++) { %>
-                                <div class="price"><h6><%= m.get(i).getHarga() %></h6></div>
+                            <% for (int i=0; i < d.size(); i++) { %>
+                                <div class="price"><h6><%= d.get(i).getHarga() %></h6></div>
                                 <div class='info'>
-                                  <h1 class='title'><%= m.get(i).getNama() %></h1>
-                                    <p class='description'><%= m.get(i).getDeskripsi() %></p>
+                                  <h1 class='title'><%= d.get(i).getNama() %></h1>
+                                    <p class='description'><%= d.get(i).getDeskripsi() %></p>
                                     <div class="main-text-button">
                                         <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
                                     </div>
                                 </div>
                             <% } %>
-                            <% if (m.isEmpty()) { %>
+                            <% if (d.isEmpty()) { %>
                                 <div class="price"><h6>30k</h6></div>
                                 <div class='info'>
                                   <h1 class='title'>Laksa Singapore</h1>
@@ -192,27 +191,6 @@
                                   </div>
                                 </div>
                             <% } %>
-
-                            <!-- <% for (int i=0; i < m.size(); i++) { %>
-                                <div class="price"><h6><%= m.get(i).getHarga() %></h6></div>
-                                <div class='info'>
-                                  <h1 class='title'><%= m.get(i).getNama() %></h1>
-                                    <p class='description'><%= m.get(i).getDeskripsi() %></p>
-                                    <div class="main-text-button">
-                                        <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                                    </div>
-                                </div>
-                            <% } %>
-                            <% if (m.isEmpty()) { %>
-                                <div class="price"><h6>30k</h6></div>
-                                <div class='info'>
-                                  <h1 class='title'>Laksa Singapore</h1>
-                                  <p class='description'>Menu yang paling best seller. Dengan kuah yang nikmat.</p>
-                                  <div class="main-text-button">
-                                      <div class="scroll-to-section"><a href="#reservation">Make Reservation <i class="fa fa-angle-down"></i></a></div>
-                                  </div>
-                                </div>
-                            <% } %> -->
                         </div>
                     </div>
                     <!-- <div class="item">

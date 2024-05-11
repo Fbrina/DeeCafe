@@ -25,20 +25,20 @@ public class CafeController {
             Class.forName("org.postgresql.Driver");
             Connection conn = DriverManager.getConnection(url, user, password);
             Statement stmnt = conn.createStatement();
-            String sql = "SELECT jenis, nama, deskripsi, harga FROM cafe";
+            String sql = "SELECT * FROM public.menu";
             ResultSet result = stmnt.executeQuery(sql);
-            List<Menu> menus = new LinkedList<>();
+            List<Menu> data = new LinkedList<>();
             
             while (result.next()) {
-                Menu data = new Menu();
-                data.setJenis(result.getString("jenis"));
-                data.setNama(result.getString("nama"));
-                data.setDeskripsi(result.getString("deskripsi"));
-                data.setHarga(result.getInt("harga"));
+                Menu menus = new Menu();
+                menus.setJenis(result.getString("jenis"));
+                menus.setNama(result.getString("nama"));
+                menus.setDeskripsi(result.getString("deskripsi"));
+                menus.setHarga(result.getInt("harga"));
 
-                menus.add(data);
+                data.add(menus);
             }
-            model.addAttribute("menus", menus);
+            model.addAttribute("data", data);
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();
