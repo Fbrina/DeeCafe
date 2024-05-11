@@ -32,13 +32,13 @@
     <body>
     
     <!-- ***** Preloader Start ***** -->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div class="jumper">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>   -->
+    </div>  
     <!-- ***** Preloader End ***** -->
     
     
@@ -50,7 +50,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="../views/index.jsp" class="logo">
-                            <img src="../views/assets/images/logo.png" align="dee cafe html template" style="width: 150px;">
+                            <img src="../views/assets/images/logo.png" align="dee cafe html template" style="width: 80px;">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
