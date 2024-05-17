@@ -35,6 +35,7 @@ public class CafeController {
                 menus.setNama(result.getString("nama"));
                 menus.setDeskripsi(result.getString("deskripsi"));
                 menus.setHarga(result.getInt("harga"));
+                menus.setGambar(result.getBytes("gambar"));
 
                 data.add(menus);
             }
