@@ -49,7 +49,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="../views/index.jsp" class="logo">
+                        <a href="/" class="logo">
                             <img src="../views/assets/images/logo.png" align="dee cafe html template" style="width: 80px;">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -236,7 +236,7 @@
                                                 <div class="left-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <%= d.get(i).getGambar() %>
+                                                            <img src="../views/assets/images/tab-item-01.png" alt="">
                                                             <h4><%= d.get(i).getNama() %></h4>
                                                             <p><%= d.get(i).getDeskripsi() %></p>
                                                             <div class="price">
@@ -264,7 +264,7 @@
                                                 <div class="right-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <%= d.get(i).getGambar() %>
+                                                            <img src="../views/assets/images/tab-item-04.png" alt="">
                                                             <h4><%= d.get(i).getNama() %></h4>
                                                             <p><%= d.get(i).getDeskripsi() %></p>
                                                             <div class="price">

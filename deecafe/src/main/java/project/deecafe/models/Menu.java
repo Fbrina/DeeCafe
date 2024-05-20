@@ -6,18 +6,16 @@ public class Menu {
     private String nama;
     private String deskripsi;
     private int harga;
-    private byte[] gambar;
 
     public Menu() {
     }
     
-    public Menu(String id, String jenis, String nama, String deskripsi, int harga, byte[] gambar) {
+    public Menu(String id, String jenis, String nama, String deskripsi, int harga) {
         this.id = id;
         this.jenis = jenis;
         this.nama = nama;
         this.deskripsi = deskripsi;
         this.harga = harga;
-        this.gambar = gambar;
     }
 
     public void setId(String id) {
@@ -58,13 +56,5 @@ public class Menu {
 
     public int getHarga() {
         return harga;
-    }
-
-    public void setGambar(byte[] gambar) {
-        this.gambar = gambar;
-    }
-
-    public byte[] getGambar() {
-        return gambar;
     }
 }
